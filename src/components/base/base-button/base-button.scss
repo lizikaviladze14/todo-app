@@ -1,0 +1,15 @@
+button {
+  cursor: pointer;
+  width: 7rem;
+  background-color: #1E6F9F;
+  border: none;
+  border-radius: 8px;
+  color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+.todo-item {
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 8px;
+
+  p {
+    width: 85%;
+    overflow: hidden;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}

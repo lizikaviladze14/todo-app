@@ -1,0 +1,1 @@
+export type ButtonTypes = 'button' | 'reset' | 'submit';

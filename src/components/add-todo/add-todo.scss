@@ -1,0 +1,8 @@
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  gap: 0.625rem;
+}

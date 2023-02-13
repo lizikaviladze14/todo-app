@@ -1,0 +1,32 @@
+.todo-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  span {
+    background-color: #333333;
+    color: #D9D9D9;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    margin-left: 0.625rem;
+  }
+
+  .created-todos {
+    display: flex;
+    p {
+      color: #4EA8DE;
+    }
+  }
+
+  .completed-todos {
+    display: flex;
+    p {
+      color: #8284FA;
+    }
+  }
+}
