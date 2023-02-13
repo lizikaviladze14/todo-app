@@ -13,7 +13,7 @@ function App() {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch('http://localhost:3000/todos');
+                const response = await fetch('https://lizikaviladze14.github.io/data/todos.json');
                 const todos = await response.json();
                 setTodos(todos);
             } catch (err) {
@@ -29,7 +29,7 @@ function App() {
     const addTodo = async (todoTitle: string) => {
         if(!todoTitle) return
         try {
-            const response = await fetch('http://localhost:3000/todos', {
+            const response = await fetch('https://lizikaviladze14.github.io/data/todos.json', {
                 method: 'POST',
                 body: JSON.stringify({
                     title: todoTitle,
@@ -47,7 +47,7 @@ function App() {
     }
 
     const toggleTodoCompletedById = (todoId: string, isCompleted: boolean) => {
-        fetch(`http://localhost:3000/todos/${todoId}`, {
+        fetch(`https://lizikaviladze14.github.io/data/todos.json/${todoId}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 isCompleted: isCompleted
@@ -71,7 +71,7 @@ function App() {
 
     const deleteTodoItem = async (todoId: string) => {
         try {
-            await fetch(`http://localhost:3000/todos/${todoId}`, {
+            await fetch(`https://lizikaviladze14.github.io/data/todos.json/${todoId}`, {
                 method: 'DELETE',
             });
             setTodos(todos.filter(todo => todo.id !== todoId))
