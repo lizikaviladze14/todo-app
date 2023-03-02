@@ -4,6 +4,11 @@
       "title": "Add new todos",
       "isCompleted": true,
       "id": 1
+    },
+    {
+      "title": "new todo",
+      "isCompleted": true,
+      "id": 3
     }
   ]
 }

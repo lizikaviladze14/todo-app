@@ -3,11 +3,44 @@ import {AppHeader} from "./components/app-header/app-header";
 import {TodoList} from "./components/todo-list/todo-list";
 import {useEffect, useState} from "react";
 import {TodoTypes} from "./types/todo.types";
+import {useFetch} from "./composables/useFetch";
 
 function App() {
     const [todos, setTodos] = useState<TodoTypes[]>([])
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
+
+    // const {
+    //     call: getTodos,
+    //     response: todos,
+    //     error: getTodosError,
+    //     loading: getTodosLoading
+    // } = useFetch<TodoTypes[]>(() => fetch('http://localhost:3005/todos'))
+    //
+    // useEffect(() => {
+    //     getTodos()
+    // }, [])
+    //
+    // function addTodo (todoTitle: string) {
+    //     if(!todoTitle) return;
+    //     const {
+    //         call: getTodos,
+    //         response: todos,
+    //         error: addTodoError,
+    //         loading: addTodoLoading
+    //     } = useFetch(() =>
+    //         fetch('http://localhost:3005/todos', {
+    //             method: 'POST',
+    //             body: JSON.stringify({
+    //                 title: todoTitle,
+    //                 isCompleted: false
+    //             }),
+    //             headers: {
+    //                 'Content-type': 'application/json; charset=UTF-8',
+    //             },
+    //         }))
+    //     getTodos()
+    // }
 
     useEffect(() => {
         const fetchData = async () => {
