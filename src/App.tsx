@@ -3,7 +3,7 @@ import {AppHeader} from "./components/app-header/app-header";
 import {TodoList} from "./components/todo-list/todo-list";
 import {useEffect, useState} from "react";
 import {TodoTypes} from "./types/todo.types";
-// import {useFetch} from "./composables/useFetch";
+import {useFetch} from "./composables/useFetch";
 
 function App() {
     const [todos, setTodos] = useState<TodoTypes[]>([])
